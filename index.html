@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <input type="checkbox" id="checkbox1" name="1" class="list">
+    <label for="1" class="name"> HTML & CSS within 2 days  ||| start learning Java</label><br>
+    <input type="checkbox" id="checkbox2" name="2" class="list">
+    <label for="2" class="name"> JavaScript | start python little amount</label><br>
+    <input type="checkbox" id="checkbox3" name="3" class="list">
+    <label for="3" class="name"> start simple project  based on html css and JS </label><br>
+    <input type="checkbox" id="checkbox4" name="4" class="list">
+    <label for="4" class="name"> Lean Git , GitHub </label><br>
+    <input type="checkbox" id="checkbox5" name="5" class="list">
+    <label for="5" class="name"> Sidewise go with DSA in java | Practice java </label><br>
+    <input type="checkbox" id="checkbox6" name="6" class="list">
+    <label for="6" class="name"> Coding practice and revise concept </label><br>
+    <input type="checkbox" id="checkbox7" name="7" class="list">
+    <label for="7" class="name">Go with CS subject like Network , Operating System  </label><br>
+    <input type="checkbox" id="checkbox8" name="8" class="list">
+    <label for="8" class="name"> Practice DSA questions and coding question always </label><br>
+    <input type="checkbox" id="checkbox9" name="9" class="list">
+    <label for="9" class="name"> According to this Choose Subject </label><br>
+
+
+
+
+    <!-- java script code -->  
+    <script>
+        // Array to hold checkbox IDs
+        const checkboxIds = ['checkbox1', 'checkbox2', 'checkbox3', 'checkbox4', 'checkbox5','checkbox6', 'checkbox7', 'checkbox8', 'checkbox9'];
+
+        // Check saved state for each checkbox
+        checkboxIds.forEach(function(id) {
+            const checkbox = document.getElementById(id);
+            const savedState = localStorage.getItem(id);
+            if (savedState === 'true') {
+                checkbox.checked = true;
+            }
+
+            // Save state when checkbox is changed
+            checkbox.addEventListener('change', function() {
+                localStorage.setItem(id, this.checked);
+            });
+        });
+    </script>
+</body>
+</html>
